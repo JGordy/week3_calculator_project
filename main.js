@@ -1,50 +1,45 @@
-// Writing the JavaScript and interacting with the DOM is the main part of the project
-// Start small by selecting some elements
-let keys = document.getElementsByTagName("span");
-let operators = ["+","-","x","/"];
-let decimalAdded = false;
+// grabbing elements
 
-console.log(keys);
+let display = document.getElementById("display");
+let numKeys = document.getElementsByClassName("keys");
+let operators = document.getElementsByClassName("operator")
 
-// Need event listener for each button
+// added Event Listeners to clear and eval
 
-for (var i = 0; i < keys.length; i++) {
-  keys[i].onclick = function(); {
+let clear = document.getElementById("clear");
+clear.addEventListener("click", clearClicked);
 
-// Need variables for inputs
-  let calcScreen = document.querySelector('.screen');
-		let screenVal = input.innerHTML;
-		let btnVal = this.innerHTML;
+let total = document.getElementById("eval");
+total.addEventListener("click", evalClicked);
+
+
+
+function operatorClicked(event) {
+
+  if (event.target.innerHTML === "X") {
+    event.target.innerHTML = "*";
+    display.textContent += event.target.innerHTML;
+  } else {
+  display.textContent += event.target.innerHTML;
   }
-
-// if statment for operators
-  if () {
-
-  }
-
-
 }
 
-// What algorithms do you need to implement?
+function numberClicked(event) {
+  display.textContent += event.target.innerHTML;
+}
+
+function clearClicked(event) {
+  display.textContent = '';
+}
+
+function evalClicked(event) {
+  display.textContent = eval(display.textContent);
+}
 
 
-
-
-
-
-// Create some functions to store repeatable steps
-
-
-
-
-
-
-
-// You'll need to find a way to track the numbers pressed until the = is pressed
-
-
-
-
-
-
-// No need for chaining long calculations yet (see hard mode)
+for (var i = 0; i < numKeys.length; i++) {
+  numKeys[i].addEventListener("click", numberClicked);
+}
+for (var i = 0; i < operators.length; i++) {
+  operators[i].addEventListener("click", operatorClicked);
+}

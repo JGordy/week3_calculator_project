@@ -1,0 +1,108 @@
+body{
+background: radial-gradient(circle, #fff 20%, #ccc);
+}
+
+.container {
+  width: 30%;
+  margin: 100px auto;
+  padding: 30px;
+  background: radial-gradient(aquamarine, darkcyan);
+  border-radius: 5%;
+  box-shadow: 0px 4px lime, 0px 10px 15px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+}
+
+span {
+height: 25px;
+/*width: 40px;*/
+padding-top: 20px;
+margin: 10px;
+border: none;
+border-radius: 6px;
+background-color: white;
+box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+text-align: center;
+color: #888;
+user-select: none;
+position: relative;
+}
+
+#toprow {
+  display: flex;
+}
+
+#toprow #clear {
+  background: #ff9fa8;
+  box-shadow: 0px 4px #ff7c87;
+	color: white;
+  text-transform: uppercase;
+}
+
+#toprow #screen {
+  flex: 1 1 80%;
+  background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  height: 50px;
+  margin: 10px;
+  text-align: right;
+  color: white;
+  font-size: 24px;
+}
+
+.row {
+  display: flex;
+}
+
+.row > span {
+  flex: 1 1 25%;
+}
+
+.operator {
+  background-color: aquamarine;
+
+}
+
+#eval {
+  background-color: #f1ff92;
+  box-shadow: 0px 4px #9da853;
+  border-radius: 6px;
+}
+
+/*Adding Hover Effects*/
+
+ span:hover {
+	background: #9c89f6;
+	box-shadow: 0px 4px #6b54d3;
+	color: white;
+}
+
+ #eval:hover {
+	background: #abb850;
+	box-shadow: 0px 4px #717a33;
+	color: #ffffff;
+}
+
+#toprow #clear:hover {
+	background: #f68991;
+	box-shadow: 0px 4px #d3545d;
+	color: white;
+}
+
+/*Adding active effects*/
+
+span:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+#eval:active {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
+}
+
+#toprow #clear:active {
+	top: 4px;
+	box-shadow: 0px 0px #d3545d;
+}

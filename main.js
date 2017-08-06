@@ -47,6 +47,8 @@ function rootClicked(event) {
 
 if (para.textContent.includes("=")) {
   // do nothing
+} else if (para.textContent == "") {
+  // do nothing
 } else if (Math.sqrt(para.textContent) != parseInt(Math.sqrt(para.textContent))) {
 
     para.textContent += " " + event.target.innerHTML + " " + "=" + " " + Math.sqrt(para.textContent).toFixed(6);
@@ -54,7 +56,7 @@ if (para.textContent.includes("=")) {
 } else {
 
   para.textContent += " " + event.target.innerHTML + " " + "=" + " " + Math.sqrt(para.textContent)
-}
+  }
 }
 
 // Number and decimal function
@@ -85,13 +87,11 @@ function clearClicked(event) {
 
 function evalClicked(event) {
 
-  //  use create element, add text to element, appendChild to display to get history and scrolling
   if (para.textContent == "") {
     // do nothing
   } else {
       para.textContent = para.textContent + " " + "=" + " " + eval(para.textContent);
   }
-
 }
 
 // add event listeners to keys and operators

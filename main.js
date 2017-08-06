@@ -25,6 +25,8 @@ function operatorClicked(event) {
 
   if (para.textContent === "") {
     para.textContent = "";
+  } else if (para.textContent.includes("=")) {
+    //  do nothing
   } else if ((para.textContent.endsWith("+")) ||
               (para.textContent.endsWith("-")) ||
               (para.textContent.endsWith("*")) ||
@@ -43,7 +45,9 @@ function modClicked(event) {
 
 function rootClicked(event) {
 
-if (Math.sqrt(para.textContent) != parseInt(Math.sqrt(para.textContent))) {
+if (para.textContent.includes("=")) {
+  // do nothing
+} else if (Math.sqrt(para.textContent) != parseInt(Math.sqrt(para.textContent))) {
 
     para.textContent += " " + event.target.innerHTML + " " + "=" + " " + Math.sqrt(para.textContent).toFixed(6);
 

@@ -40,7 +40,14 @@ function operatorClicked(event) {
 }
 
 function modClicked(event) {
-  para.textContent += " " + event.target.innerHTML + " ";
+  
+  if (para.textContent.includes("=")) {
+    // do nothing
+  } else if (para.textContent == "") {
+    //  do nothing
+  } else {
+    para.textContent += " " + event.target.innerHTML + " ";
+  }
 }
 
 function rootClicked(event) {

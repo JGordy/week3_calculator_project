@@ -5,11 +5,16 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body onload="clearClicked()">
     <div class="container">
       <div class="row" id="toprow">
+        <div id="display" class="screen">
+        </div>
+      </div>
+      <div class="row" id="clearRow">
         <span id="clear">c</span>
-        <div id="display" class="screen"></div>
+        <span id="modulo">%</span>
+        <span id="root">√</span>
       </div>
       <div class="row">
         <span class="keys" id="seven">7</span>

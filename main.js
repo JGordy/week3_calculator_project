@@ -72,6 +72,8 @@ function numberClicked(event) {
 
   if (para.textContent.includes("=")) {
     // do nothing
+  } else if ((event.target.innerHTML == ".") && (para.textContent.endsWith("."))) {
+    // do nothing
   } else {
     para.textContent += event.target.innerHTML;
   }

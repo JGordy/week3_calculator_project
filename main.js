@@ -27,10 +27,10 @@ function operatorClicked(event) {
     para.textContent = "";
   } else if (para.textContent.includes("=")) {
     //  do nothing
-  } else if ((para.textContent.endsWith("+")) ||
-              (para.textContent.endsWith("-")) ||
-              (para.textContent.endsWith("*")) ||
-              (para.textContent.endsWith("/"))) {
+  } else if ((para.textContent.endsWith("+ ")) ||
+              (para.textContent.endsWith("- ")) ||
+              (para.textContent.endsWith("* ")) ||
+              (para.textContent.endsWith("/ "))) {
       para.textContent = para.textContent;
   } else if (event.target.innerHTML === "X") {
     para.textContent += " " + "*" + " ";
@@ -40,7 +40,7 @@ function operatorClicked(event) {
 }
 
 function modClicked(event) {
-  
+
   if (para.textContent.includes("=")) {
     // do nothing
   } else if (para.textContent == "") {

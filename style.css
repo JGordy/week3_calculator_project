@@ -4,7 +4,7 @@ background: radial-gradient(circle, #fff 20%, #ccc);
 
 .container {
   width: 30%;
-  margin: 100px auto;
+  margin: 75px auto;
   padding: 30px;
   background: radial-gradient(aquamarine, darkcyan);
   border-radius: 5%;
@@ -76,7 +76,7 @@ position: relative;
   border-radius: 6px;
 }
 
-/*Adding Hover Effects*/
+/********  Adding Hover Effects  *********/
 
  span:hover {
 	background: #9c89f6;
@@ -101,7 +101,7 @@ position: relative;
   background-color: #9c89f6;
 }
 
-/*Adding active effects*/
+/******** Adding active effects ********/
 
 span:active {
 	box-shadow: 0px 0px #6b54d3;

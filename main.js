@@ -28,9 +28,9 @@ function operatorClicked(event) {
   } else if (para.textContent.includes("=")) {
     //  do nothing
   } else if ((para.textContent.endsWith("+ ")) ||
-              (para.textContent.endsWith("- ")) ||
-              (para.textContent.endsWith("* ")) ||
-              (para.textContent.endsWith("/ "))) {
+    (para.textContent.endsWith("- ")) ||
+    (para.textContent.endsWith("* ")) ||
+    (para.textContent.endsWith("/ "))) {
       para.textContent = para.textContent;
   } else if (event.target.innerHTML === "X") {
     para.textContent += " " + "*" + " ";
@@ -52,17 +52,17 @@ function modClicked(event) {
 
 function rootClicked(event) {
 
-if (para.textContent.includes("=")) {
-  // do nothing
-} else if (para.textContent == "") {
-  // do nothing
-} else if (Math.sqrt(para.textContent) != parseInt(Math.sqrt(para.textContent))) {
+  if (para.textContent.includes("=")) {
+    // do nothing
+  } else if (para.textContent == "") {
+    // do nothing
+  } else if (Math.sqrt(para.textContent) != parseInt(Math.sqrt(para.textContent))) {
 
     para.textContent += " " + event.target.innerHTML + " " + "=" + " " + Math.sqrt(para.textContent).toFixed(6);
 
-} else {
+  } else {
 
-  para.textContent += " " + event.target.innerHTML + " " + "=" + " " + Math.sqrt(para.textContent)
+    para.textContent += " " + event.target.innerHTML + " " + "=" + " " + Math.sqrt(para.textContent)
   }
 }
 
@@ -99,7 +99,7 @@ function evalClicked(event) {
   if (para.textContent == "") {
     // do nothing
   } else {
-      para.textContent = para.textContent + " " + "=" + " " + eval(para.textContent);
+    para.textContent = para.textContent + " " + "=" + " " + eval(para.textContent);
   }
 }
 

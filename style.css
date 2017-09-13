@@ -123,3 +123,38 @@ p {
   margin-bottom: 0px;
   border-bottom: 2px solid aquamarine;
 }
+
+/*******************************
+       Mobile styling
+*******************************/
+
+@media (max-width: 800px) {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  border-radius: 3px;
+  box-shadow: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+#clear {
+  flex: 0 0 49%;
+}
+
+span {
+  margin: 3px;
+  margin-bottom: 5px;
+}
+} /* end of mobile media query */
